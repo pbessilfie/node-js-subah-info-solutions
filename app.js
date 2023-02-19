@@ -42,6 +42,7 @@ server.post("/add_Student", async (req, res) => {
 // connecting sever to DataBase
 server.listen(PORT, () => {
   console.log(`server has started running on Port ${PORT}`);
+  mongoose.set('strictQuery', false);
   mongoose.connect(dataBase_URL, () => {
     console.log("DataBase is connected");
   });
