@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const studentSchema = require("./models/studentModel");
 const dataBase_URL ="mongodb+srv://essilfieprinceb2301:<password>@cluster0.17quzuj.mongodb.net/?retryWrites=true&w=majority";
 const server = express();
-const PORT = 2000;
+const PORT = process.env.PORT || 2000;
 
 // GETTING ALL STUDENT
 server.get("/students", (req, res) => {
